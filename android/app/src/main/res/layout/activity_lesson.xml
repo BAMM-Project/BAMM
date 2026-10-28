@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bamm_green_dark"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/lessonIconLeft"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:importantForAccessibility="no"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="12dp"
+            android:importantForAccessibility="no"
+            android:rotation="180"
+            android:src="@drawable/ic_replay"
+            app:tint="@color/bamm_orange" />
+
+        <ImageView
+            android:id="@+id/lessonIconRight"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:importantForAccessibility="no"
+            app:tint="@color/bamm_red" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lessonText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <ProgressBar
+        android:id="@+id/lessonProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginTop="32dp"
+        android:max="1000"
+        android:progressTint="@color/bamm_green" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/lessonReplay"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginEnd="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/replay"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:src="@drawable/ic_replay"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/lessonClose"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/close"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:src="@drawable/ic_check"
+            app:tint="@color/bamm_green" />
+    </LinearLayout>
+</LinearLayout>

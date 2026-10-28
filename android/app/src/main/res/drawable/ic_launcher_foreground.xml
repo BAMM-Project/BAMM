@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bouclier blanc + coche verte, centré dans la zone sûre (66dp) de l'icône adaptative -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <group android:translateX="30" android:translateY="30" android:scaleX="2" android:scaleY="2">
+        <path android:fillColor="#FFFFFF"
+            android:pathData="M12,1L3,5v6c0,5.55 3.84,10.74 9,12 5.16,-1.26 9,-6.45 9,-12V5l-9,-4z" />
+        <path android:fillColor="#1F7A4D"
+            android:pathData="M10,16.2l-3.5,-3.5 1.4,-1.4 2.1,2.1 5.6,-5.6 1.4,1.4z" />
+    </group>
+</vector>

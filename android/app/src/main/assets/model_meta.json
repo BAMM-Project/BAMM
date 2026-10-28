@@ -1,0 +1,110 @@
+{
+  "version": "2026-10-28",
+  "regions": [
+    "Alibori",
+    "Atacora",
+    "Atlantique",
+    "Borgou",
+    "Collines",
+    "Couffo",
+    "Donga",
+    "Littoral",
+    "Mono",
+    "Oueme",
+    "Plateau",
+    "Zou"
+  ],
+  "models": {
+    "full": {
+      "file": "bamm_full.tflite",
+      "features": [
+        "call_hour",
+        "call_duration_sec",
+        "n_reports",
+        "call_frequency_7d",
+        "is_registered_operator",
+        "ussd_after_call",
+        "region_Alibori",
+        "region_Atacora",
+        "region_Atlantique",
+        "region_Borgou",
+        "region_Collines",
+        "region_Couffo",
+        "region_Donga",
+        "region_Littoral",
+        "region_Mono",
+        "region_Oueme",
+        "region_Plateau",
+        "region_Zou"
+      ],
+      "numeric": [
+        "call_hour",
+        "call_duration_sec",
+        "n_reports",
+        "call_frequency_7d"
+      ],
+      "boolean": [
+        "is_registered_operator",
+        "ussd_after_call"
+      ],
+      "threshold": 0.64,
+      "size_kb": 7.4
+    },
+    "precall": {
+      "file": "bamm_precall.tflite",
+      "features": [
+        "call_hour",
+        "n_reports",
+        "call_frequency_7d",
+        "is_registered_operator",
+        "region_Alibori",
+        "region_Atacora",
+        "region_Atlantique",
+        "region_Borgou",
+        "region_Collines",
+        "region_Couffo",
+        "region_Donga",
+        "region_Littoral",
+        "region_Mono",
+        "region_Oueme",
+        "region_Plateau",
+        "region_Zou"
+      ],
+      "numeric": [
+        "call_hour",
+        "n_reports",
+        "call_frequency_7d"
+      ],
+      "boolean": [
+        "is_registered_operator"
+      ],
+      "threshold": 0.49,
+      "size_kb": 7.1
+    }
+  },
+  "alert_levels": {
+    "red": "risk >= threshold",
+    "orange": "risk >= threshold / 2 ou numéro inconnu"
+  },
+  "community_red_threshold": 3,
+  "test_metrics": {
+    "full": {
+      "seuil": 0.64,
+      "Accuracy": 0.946,
+      "Precision": 0.773,
+      "Recall": 0.907,
+      "F1": 0.834,
+      "F2": 0.876,
+      "AUC-ROC": 0.981,
+      "fraudes ratées (FN)": 21.0,
+      "fausses alertes (FP)": 60.0
+    },
+    "precall": {
+      "seuil": 0.48999999999999994,
+      "Precision": 0.5570652173913043,
+      "Recall": 0.9111111111111111,
+      "F1": 0.6913996627318718,
+      "AUC-ROC": 0.9535703703703704
+    }
+  }
+}

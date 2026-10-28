@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BAMM</string>
+    <string name="tagline">Bouclier Anti-fraude Mobile Money</string>
+    <string name="accessibility_label">BAMM — protection USSD</string>
+    <string name="accessibility_description">Lit uniquement les codes tapés dans le clavier téléphonique pour bloquer les codes de transfert d\'argent dictés par un arnaqueur. Aucune autre donnée n\'est lue ni envoyée.</string>
+    <string name="channel_alerts">Alertes fraude</string>
+    <string name="channel_info">Informations sur les appels</string>
+
+    <string name="shield_on">Protection active</string>
+    <string name="shield_partial">Protection incomplète — touchez les lignes oranges</string>
+    <string name="section_protections">Protections</string>
+    <string name="prot_screening">Analyse des appels entrants</string>
+    <string name="prot_phone">Accès au téléphone et aux codes USSD</string>
+    <string name="prot_overlay">Alerte par-dessus l\'appel</string>
+    <string name="prot_accessibility">Blocage des codes dans le clavier</string>
+    <string name="prot_notifications">Notifications</string>
+    <string name="to_enable">Activer</string>
+
+    <string name="section_demo">Démonstration</string>
+    <string name="demo_number_hint">Numéro de l\'appelant</string>
+    <string name="demo_call">Simuler un appel</string>
+    <string name="demo_ussd">Taper *880*7721*45000#</string>
+    <string name="section_dialer">Composer un code USSD en sécurité</string>
+    <string name="safe_dial_hint">*880#</string>
+    <string name="safe_dial">Composer</string>
+    <string name="ussd_allowed">Code autorisé (%1$s)</string>
+    <string name="not_ussd">Ce n\'est pas un code USSD</string>
+
+    <string name="section_community">Base communautaire</string>
+    <string name="report_hint">Numéro à signaler</string>
+    <string name="report">Signaler</string>
+    <string name="report_done">Numéro signalé. Merci !</string>
+    <string name="report_queued">Hors ligne : signalement envoyé dès le retour du réseau</string>
+    <string name="community_stats">%1$d numéros en alerte rouge · %2$d signalés par vous · %3$d en attente · synchro : %4$s</string>
+    <string name="api_url_hint">URL de l\'API BAMM</string>
+    <string name="sync">Synchroniser</string>
+    <string name="sync_ok">Base communautaire à jour</string>
+    <string name="sync_failed">Serveur injoignable — le cache local reste actif</string>
+
+    <string name="section_settings">Réglages</string>
+    <string name="region_label">Ma région</string>
+    <string name="section_incidents">Incidents</string>
+    <string name="no_incidents">Aucun incident pour l\'instant.</string>
+    <string name="model_info">Modèle embarqué (TFLite, hors ligne) — sonnerie : %1$d variables, seuil %2$.2f · après appel : %3$d variables, seuil %4$.2f</string>
+
+    <string name="alert_call_title">Appel d\'un arnaqueur probable</string>
+    <string name="alert_unknown_title">Numéro inconnu</string>
+    <string name="call_safe_title">Numéro officiel</string>
+    <string name="alert_ussd_title">Code de transfert bloqué</string>
+    <string name="post_call_title">Appel suspect terminé — signaler ce numéro ?</string>
+    <string name="close">Fermer</string>
+    <string name="unlock_double_tap">Touchez 2 fois pour débloquer</string>
+    <string name="unlock_wait">Attendez %1$d s…</string>
+    <string name="unlock_proceed">Composer quand même</string>
+    <string name="replay">Réécouter</string>
+    <string name="choose_language">Choisissez votre langue</string>
+</resources>
