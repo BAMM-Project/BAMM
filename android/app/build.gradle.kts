@@ -10,10 +10,26 @@ android {
         applicationId = "bj.bamm.app"
         minSdk = 26          // Android 8 : UssdResponseCallback / sendUssdRequest
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.0.1"
         // URL de l'API communautaire (10.0.2.2 = machine hôte depuis l'émulateur)
         buildConfigField("String", "DEFAULT_API_URL", "\"http://10.0.2.2:8000\"")
+    }
+
+    // Play Protect (protection renforcée contre la fraude) bloque l'installation hors
+    // Play Store des APK qui déclarent un service d'accessibilité. L'édition « standard »,
+    // distribuée sur le site, s'en passe ; la « complete » l'ajoute (installation par ADB).
+    flavorDimensions += "edition"
+    productFlavors {
+        create("standard") {
+            dimension = "edition"
+            buildConfigField("boolean", "USSD_ACCESSIBILITY", "false")
+        }
+        create("complete") {
+            dimension = "edition"
+            versionNameSuffix = "-complete"
+            buildConfigField("boolean", "USSD_ACCESSIBILITY", "true")
+        }
     }
 
     buildTypes {

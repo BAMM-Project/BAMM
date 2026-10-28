@@ -62,19 +62,8 @@
             </intent-filter>
         </service>
 
-        <!-- Lecture de la saisie USSD dans le clavier téléphonique -->
-        <service
-            android:name=".service.UssdAccessibilityService"
-            android:exported="true"
-            android:label="@string/accessibility_label"
-            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
-            <intent-filter>
-                <action android:name="android.accessibilityservice.AccessibilityService" />
-            </intent-filter>
-            <meta-data
-                android:name="android.accessibilityservice"
-                android:resource="@xml/accessibility_config" />
-        </service>
+        <!-- Le service d'accessibilité (lecture du clavier téléphonique) n'est déclaré que
+             dans l'édition « complete » : voir src/complete/AndroidManifest.xml -->
 
         <receiver
             android:name=".service.PhoneStateReceiver"

@@ -18,6 +18,7 @@ import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import bj.bamm.app.BammApp
+import bj.bamm.app.BuildConfig
 import bj.bamm.app.R
 import bj.bamm.app.core.Level
 import bj.bamm.app.core.Prefs
@@ -70,10 +71,10 @@ class MainActivity : AppCompatActivity() {
         Protection(R.string.prot_overlay, Settings.canDrawOverlays(this)) {
             startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:$packageName")))
         },
+    ) + (if (BuildConfig.USSD_ACCESSIBILITY) listOf(
         Protection(R.string.prot_accessibility, accessibilityOk()) {
             startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
-        },
-    ) + if (Build.VERSION.SDK_INT >= 33) listOf(
+        }) else emptyList()) + if (Build.VERSION.SDK_INT >= 33) listOf(
         Protection(R.string.prot_notifications, granted(Manifest.permission.POST_NOTIFICATIONS)) {
             permLauncher.launch(arrayOf(Manifest.permission.POST_NOTIFICATIONS))
         }) else emptyList()

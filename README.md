@@ -82,9 +82,14 @@ Kotlin, `minSdk 26` (Android 8), modèle TensorFlow Lite embarqué, aucune dépe
 
 ```bash
 cd android
-gradlew assembleDebug          # → app/build/outputs/apk/debug/app-debug.apk
-gradlew testDebugUnitTest
+gradlew assembleStandardRelease   # → app/build/outputs/apk/standard/release/ (APK du site)
+gradlew assembleCompleteRelease   # → édition complète, avec service d'accessibilité
+gradlew testStandardDebugUnitTest
 ```
+
+Deux éditions : Play Protect (protection renforcée contre la fraude) bloque l'installation depuis un navigateur des APK qui déclarent un service d'accessibilité.
+- **standard** (téléchargée sur le site) : interception USSD par `OutgoingCallReceiver` et composeur sûr, sans accessibilité ;
+- **complete** : ajoute `UssdAccessibilityService` (`src/complete/AndroidManifest.xml`), à installer par `adb install`.
 
 Depuis l'émulateur, l'API est jointe sur `http://10.0.2.2:8000` (modifiable dans **Réglages** de l'app).
 
