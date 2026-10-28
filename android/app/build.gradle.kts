@@ -20,6 +20,8 @@ android {
         release {
             isMinifyEnabled = false
             signingConfig = signingConfigs.getByName("debug")
+            // Téléphones réels uniquement (ARM) : divise la taille de l'APK par ~2
+            ndk { abiFilters += listOf("arm64-v8a", "armeabi-v7a") }
         }
     }
     buildFeatures {
